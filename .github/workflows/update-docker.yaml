@@ -44,5 +44,4 @@ jobs:
       
       - name: Build and push
         run: |
-          docker build -t asd1115056/lsky-pro:latest .
-          docker push asd1115056/lsky-pro:latest
+          docker buildx build --push --platform linux/arm/v8,linux/arm64 -t asd1115056/lsky-pro:latest .
