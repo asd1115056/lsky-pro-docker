@@ -40,8 +40,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
+      
       - name: Build and push
         run: |
-          docker buildx build -t asd1115056/lsky-pro:latest . --platform linux/arm64
-          docker push asd1115056/lsky-pror:latest
+          docker build -t asd1115056/lsky-pro:latest .
+          docker push asd1115056/lsky-pro:latest
